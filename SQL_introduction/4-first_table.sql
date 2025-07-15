@@ -2,6 +2,6 @@
 
 CREATE TABLE IF NOT EXISTS first_table (
 	id INT,
-	nameVARCHAR(256)
+	name VARCHAR(256)
 );
 
