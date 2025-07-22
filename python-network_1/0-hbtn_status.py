@@ -7,12 +7,9 @@ and displays information about the response body.
 import urllib.request
 
 if __name__ == "__main__":
-    url = 'https://intranet.hbtn.io/status'
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    with urllib.request.urlopen(req) as response:
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
         body = response.read()
         print("Body response:")
-        print("\t- type: {}".format(type(body)))
-        print("\t- content: {}".format(body))
-        print("\t- utf8 content: {}".format(body.decode('utf-8')))
-
+        print("    - type: {}".format(type(body)))
+        print("    - content: {}".format(body))
+        print("    - utf8 content: {}".format(body.decode('utf-8')))
